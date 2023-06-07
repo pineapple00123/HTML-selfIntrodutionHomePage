@@ -1,0 +1,69 @@
+ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    margin: 0 10px;
+}
+
+.menu{
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+}
+
+a {
+    text-decoration-line: none;
+    color: inherit;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 5px;
+    background-color: lightgray;
+    transition: background-color 0.5s ease;
+}
+
+a:hover {
+    background-color: gray;
+    color: white;
+}
+h1 {
+    text-shadow: 1px 1px 2px rgb(0, 0, 0);
+    margin: 0;
+}
+header {
+    text-align: center;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+footer {
+    background-color: #333;
+    padding: 20px;
+    color: white;
+    text-align: center;
+}
+#git{
+      width: 70px;
+      height: 50px;
+  }
+img {
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 10px;
+}
+
+p {
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0;
+    line-height: 1.4;
+}
+body {
+    padding-top: 50px;
+    background-color: aliceblue;
+}

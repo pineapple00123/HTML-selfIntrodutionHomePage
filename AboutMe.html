@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>자기소개</title>
+    <link href="common.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="common.js"></script>
+    <style>
+        section {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+
+        .postIt {
+            border: 1px solid gray;
+            font-size: 16px;
+            width: 500px;
+            display: inline-block;
+            position: relative;
+            background-color: lightgray;
+            color: black;
+            padding-top: 15px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .postIt div {
+            padding: 5px;
+            border-bottom: 1px solid black;
+        }
+
+        canvas {
+            display: inline-block;
+        }
+    </style>
+</head>
+<body onload="drawFlower()">
+<header>
+    <h1>자기소개</h1>
+</header>
+<nav class="menu">
+    <ul>
+        <li><h4><a href="MyInterest.html">my interest</a></h4></li>
+        <li><h4><a href="FuturePlan.html">my future plan</a></h4></li>
+        <li>
+            <form>
+                <label>
+                    <select id="songSelect">
+                        <option id="song1">song1</option>
+                        <option id="song2">song2</option>
+                        <option id="song3">song3</option>
+                        <option id="song4">song4</option>
+                    </select>
+                </label>
+            </form>
+            <audio id="audio" src="song1.mp3" controls>
+            </audio>
+        </li>
+    </ul>
+</nav>
+<section>
+    <article>
+        <div class="postIt">
+            <div>주제 선정 동기와 이루고 싶은 목표!</div>
+            <div>제가 벡엔드 개발자를 선택한 이유는</div>
+            <div>사람들이 흔히보는 디자인적인 요소보다 그 뒤에서 데이터들이 이동하고</div>
+            <div>데이터를 파싱하고 트래픽을 관리하는 부분이 저에게는 흥미로웠기 때문입니다.</div>
+            <div>저는 백엔드 개발자분야에서 시니어가 되어 저만의 회사를 창업해</div>
+            <div>다양한 기업들의 요구사항을 관리하고 개발하는 사람이 되고 싶습니다</div>
+        </div>
+    </article>
+    <article>
+        <div class="postIt">
+            <div>본인 성장 과정</div>
+            <div>저는 16살때 한국을 떠나 해외에 살면서 다양한 가치관을 가진 사람들</div>
+            <div>과 교류를 하면서 다른사람들을 이해하는 방법,세상은 넓은것을</div>
+            <div>배웠습니다.제가 이 학과를 선택한 이유도 그떄 외국 친구들과 이야기를</div>
+            <div>하면서 만약 지금 무엇을 할지 모르겠다면 한번 IT개발을 해보는 것이 어때</div>
+            <div>라고 하면서 조언을 받아 선택하게 되었습니다.</div>
+        </div>
+    </article>
+    <article>
+        <div class="postIt">
+            <div>최근 사회 이슈</div>
+            <div>최근에 AI기술이 비약적으로 발전하면서 chetGPT,google bard등</div>
+            <div>다양한 AI플랫폼들이 등장 했습니다.하지만 이러한 플렛폼들이 사용함에 있어서</div>
+            <div>개인정보에 대한 유출 및 저작권 적인 부분,AI가 잘못된 정보를 제공하는 부분등</div>
+            <div>다양한 분야에서 문제점들이 발견되고있습니다.아직까지는 AI가 완전히 새로운</div>
+            <div>것을 만드는 것이 아닌 웹상에서 정보를 찾아오고 나의 질문 사항들로 부터 학습</div>
+            <div>하는 부분들이 있기때문에 아직까지는 AI를 완전히 신뢰하기 보다는</div>
+            <div>도움을 주는 어드바이저로써 활용하는 것이 바람직하다고 생각합니다</div>
+        </div>
+    </article>
+    <article>
+        <div class="postIt">
+            <div>어려웠던 부분</div>
+            <div>이 과제를 진행하면서 어려웠던 부분들은 디자인적인 요소였습니다.</div>
+            <div>디자인을 전문적으로 배워본적이 없어서 어떻게 요소들을 배치하고</div>
+            <div>요소를 디자인 하는것이 어려웠습니다</div>
+            <div>그런 어려운 부분들을 해결하기위해 많은 구글링 및 chetGPT를 활용해</div>
+            <div>정보를 얻고 아이디어를 얻어서 지금의 페이지들을 구성했습니다.</div>
+        </div>
+    </article>
+    <article>
+        <div class="postIt">
+            <div>본인 역량</div>
+            <div>저는 아직까지는 많은 기술 스텍들을 다루어본적이 없어서</div>
+            <div>여기에 적기는 민망하지만 현재 java Spring 프레임워크를 학습중입니다</div>
+            <div>그리고 git이용한 간단한 프로젝트 관리 및 mySQL를 이용한</div>
+            <div>java 프로그렘을 만들수 있습니다.</div>
+            <div>앞으로 좀더 학습을 해서 저만의 다양한 스펙을 만들고 싶습니다.</div>
+        </div>
+    </article>
+    <canvas id="canvas" width="500" height="300"></canvas>
+</section>
+<footer>
+    <p>contact git</p>
+    <img id="git" src="git.png" alt="" onclick="openGit()">
+</footer>
+</body>
+<script>
+    document.getElementById('songSelect').addEventListener('change', function () {
+        const audio = document.getElementById('audio');
+        audio.src = this.value + ".mp3";
+    });
+
+    const canvas = document.getElementById('canvas');
+    const context = canvas.getContext('2d');
+
+    function drawFlower(progress) {
+        context.clearRect(0, 0, canvas.width, canvas.height);
+
+        const centerX = canvas.width / 2;
+        const centerY = canvas.height / 2;
+        const petalRadius = 80;
+        const innerRadius = 50;
+        const petalCount = 8;
+        const angle = (Math.PI * 2) / petalCount;
+
+        context.fillStyle = 'yellow';
+        context.beginPath();
+        context.arc(centerX, centerY, innerRadius, 0, Math.PI * 2);
+        context.closePath();
+        context.fill();
+
+        context.fillStyle = 'orange';
+        context.globalCompositeOperation = 'destination-over';
+        for (let i = 0; i < petalCount; i++) {
+            const x = centerX + Math.cos(angle * i) * petalRadius * progress;
+            const y = centerY + Math.sin(angle * i) * petalRadius * progress;
+
+            context.beginPath();
+            context.arc(x, y, innerRadius, 0, Math.PI * 2);
+            context.closePath();
+            context.fill();
+        }
+    }
+
+    function animate() {
+        let progress = 0;
+        const animationDuration = 1000;
+        const frameDuration = 16;
+
+        const animateStep = function () {
+            context.clearRect(0, 0, canvas.width, canvas.height);
+            const progressFraction = progress / animationDuration;
+            drawFlower(progressFraction);
+
+            progress += frameDuration;
+            if (progress < animationDuration) {
+                requestAnimationFrame(animateStep);
+            }
+        };
+
+        requestAnimationFrame(animateStep);
+    }
+
+    animate();
+
+
+</script>
+</html>

@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>미래 계획</title>
+    <link href="common.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="common.js"></script>
+</head>
+<style>
+    .tableContainer {
+        display: flex;
+    }
+    .tableContainer table {
+        flex: 1;
+        width: 100%;
+    }
+    .tableContainer iframe {
+        width: 300px;
+        height: 500px;
+        margin-left: 20px;
+    }
+    .container legend {
+        background-color: black;
+        color: white;
+        padding: 10px;
+        font-size: 20px;
+        font-weight: bold;
+        border-radius: 5px;
+    }
+    thead{
+        background-color: aliceblue;
+    }
+    table {
+        border-collapse: collapse;
+    }
+    th{
+        width: 600px;
+    }
+    tbody td:hover{
+        animation-name: trHover;
+        animation-duration: 5s;
+        animation-iteration-count: 1;
+        animation-fill-mode: forwards;
+    }
+    @keyframes trHover {
+        to {
+            background-color: lightslategray;
+        }
+    }
+
+</style>
+<body>
+<header>
+    <h1>미래 계획</h1>
+</header>
+<nav class="menu">
+    <ul>
+        <li><h4><a href="AboutMe.html">about me</a></h4></li>
+        <li><h4><a href="MyInterest.html">my interest</a></h4></li>
+        <li>
+            <form>
+                <label>
+                    <select id="songSelect">
+                        <option id="song1">song1</option>
+                        <option id="song2">song2</option>
+                        <option id="song3">song3</option>
+                        <option id="song4">song4</option>
+                    </select>
+                </label>
+            </form>
+            <audio id="audio" src="song1.mp3" controls>
+            </audio>
+        </li>
+    </ul>
+</nav>
+<section>
+    <article>
+        <fieldset class="container">
+            <legend>
+                나의 미래 계획
+            </legend>
+            <div class="tableContainer">
+                    <table border="1">
+                        <tbody>
+                        <tr>
+                            <td rowspan="4">3학년 여름 방학</td>
+                        </tr>
+                        <tr>
+                            <td>스프링 공부</td>
+                        </tr>
+                        <tr>
+                            <td>스프링을 이용한 toy 프로젝트</td>
+                        </tr>
+                        <tr>
+                            <td>토익공부</td>
+                        </tr>
+                        <tr>
+                            <td rowspan="4">3학년 2학기</td>
+                        </tr>
+                        <tr>
+                            <td>스프링 공부</td>
+                        </tr>
+                        <tr>
+                            <td>정보처리기사 필기 준비</td>
+                        </tr>
+                        <tr>
+                            <td>토익공부</td>
+                        </tr>
+                        <tr>
+                            <td rowspan="4">4학년 1학기</td>
+                        </tr>
+                        <tr>
+                            <td>정보처리기사 실기준비</td>
+                        </tr>
+                        <tr>
+                            <td>나만의 개인 포트폴리오만들기</td>
+                        </tr>
+                        <tr>
+                            <td>백준 알고리즘 풀기</td>
+                        </tr>
+                        <tr>
+                            <td rowspan="3">4학년 2학기</td>
+                        </tr>
+                        <tr>
+                            <td>취업준비</td>
+                        </tr>
+                        <tr>
+                            <td>인턴쉽(가능하다면)</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <iframe src="https://www.inflearn.com/course/스프링-입문-스프링부트" width="100%" height="500px"
+                        style="float: right">
+                </iframe>
+        </fieldset>
+    </article>
+</section>
+<footer>
+    <p>contact git</p>
+    <img id="git" src="git.png" alt="" onclick="openGit()">
+</footer>
+</body>
+<script>
+    document.getElementById('songSelect').addEventListener('change', function () {
+        const audio = document.getElementById('audio');
+        audio.src = this.value + ".mp3";
+    });
+</script>
+</html>
